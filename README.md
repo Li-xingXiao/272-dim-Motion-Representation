@@ -101,3 +101,7 @@ python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representa
 <p align="center">
   <em>Left: Recover from rotation &nbsp;&nbsp;&nbsp;&nbsp; Right: Recover from position</em>
 </p>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tryhiseyyysum/272-dim-Motion-Representation&type=Date)](https://www.star-history.com/#tryhiseyyysum/272-dim-Motion-Representation&Date)
