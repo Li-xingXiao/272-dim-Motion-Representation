@@ -5,6 +5,7 @@
 </p>
 
 > 🔄 Left: Our Representation; Right: IK failure.
+> 
 > We refine the motion representation to enable directly conversion from joint rotations to SMPL body parameters, removing the need of Inverse Kinematics (IK) operation.
 ## 🚀 Getting Started
 
