@@ -161,8 +161,6 @@ def smpl2bvh(model_path:str, poses:str, output:str, mirror:bool,
         "Right_palm",
     ]
     
-    # I prepared smpl models only, 
-    # but I will release for smplx models recently.
     model = smplx.create(model_path=model_path, 
                         model_type=model_type,
                         gender=gender, 
@@ -188,7 +186,6 @@ def smpl2bvh(model_path:str, poses:str, output:str, mirror:bool,
     assert poses.shape[-1] == 272
     
     poses = recover_from_local_rotation(poses, 22)
-    # import pdb; pdb.set_trace()
     assert poses.shape[-1] == 85
     
     rots = poses[:, :72].reshape(-1, 24, 3)
@@ -201,10 +198,6 @@ def smpl2bvh(model_path:str, poses:str, output:str, mirror:bool,
 
     # # to quaternion
     rots = axis_angle_to_quaternion(torch.from_numpy(rots)).numpy()
-
-    # change foot and wrist 
-    
-
     order = "zyx"
     pos = offsets[None].repeat(len(rots), axis=0)
     positions = pos.copy()
