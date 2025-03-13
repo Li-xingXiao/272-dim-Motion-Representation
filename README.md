@@ -1,4 +1,4 @@
-# Processing scripts of 272-dimentional Motion Representation
+# Processing scripts of 272-dim Motion Representation
 
 <p align="center">
   <img src="./gif/spin_ik.gif" alt="Visualization IK" width="600"/>
