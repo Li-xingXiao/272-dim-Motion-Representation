@@ -4,7 +4,7 @@
   <img src="./gif/spin_ik.gif" alt="Visualization IK" width="600"/>
 </p>
 
-> 🔄 We refine the motion representation to enable directly conversion from joint rotations to SMPL body parameters, removing the need of Inverse Kinematics (IK) operation.
+> 🔄 Left: Our Representation; Right IK failure. We refine the motion representation to enable directly conversion from joint rotations to SMPL body parameters, removing the need of Inverse Kinematics (IK) operation.
 ## 🚀 Getting Started
 
 ### 🐍 Python Virtual Environment
