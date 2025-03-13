@@ -83,9 +83,15 @@ python cal_mean_std.py --input_dir ./output/Representation_272 --output_dir ./me
 ```
 
 ### 5. Visualize representation (Optional)
+> Recover from rotation:
 ```python
 python recover_visualize.py --mode rot --input_dir ./output/Representation_272 --output_dir ./visualize_result
 ```
+> Recover from position:
+```python
+python recover_visualize.py --mode pos --input_dir ./output/Representation_272 --output_dir ./visualize_result
+```
+
 
 ### 6. Representation_272 to BVH conversion (Optional)
 ```python
