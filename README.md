@@ -110,4 +110,4 @@ python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representa
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tryhiseyyysum/272-dim-Motion-Representation&type=Date)](https://www.star-history.com/#tryhiseyyysum/272-dim-Motion-Representation&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Li-xingXiao/272-dim-Motion-Representation&type=Date)](https://www.star-history.com/#Li-xingXiao/272-dim-Motion-Representation&Date)
