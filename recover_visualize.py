@@ -14,12 +14,13 @@ import visualization.plot_3d_global as plot_3d
 import argparse
 import tqdm
 
-def findAllFile(base):
+def findAllFile(base, endswith='.npy'):
     file_path = []
     for root, ds, fs in os.walk(base, followlinks=True):
         for f in fs:
             fullname = os.path.join(root, f)
-            file_path.append(fullname)
+            if fullname.endswith(endswith):
+                file_path.append(fullname)
     return file_path
 
 def rot_yaw(yaw):
@@ -133,7 +134,7 @@ def smpl85_2_smpl322(smpl_85_data):
     result = np.concatenate((smpl_85_data[:,:66], np.zeros((smpl_85_data.shape[0], 90)), np.zeros((smpl_85_data.shape[0], 3)), np.zeros((smpl_85_data.shape[0], 50)), np.zeros((smpl_85_data.shape[0], 100)), smpl_85_data[:,72:72+3], smpl_85_data[:,75:]), axis=-1)
     return result
 
-def visualize_smpl_85(data, title=None, output_path='visualize_result', fps=60):
+def visualize_smpl_85(data, title=None, output_path='visualize_result', name='', fps=60):
     # data: torch.Size([nframe, 85])
     smpl_85_data = data
     if len(smpl_85_data.shape) == 3:
@@ -143,17 +144,17 @@ def visualize_smpl_85(data, title=None, output_path='visualize_result', fps=60):
     vert, joints, motion, faces = process_smplx_data(smpl_85_data, norm_global_orient=False, transform=False)
     xyz = joints[:, :22, :].reshape(1, -1, 22, 3).detach().cpu().numpy()
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    pose_vis = plot_3d.draw_to_batch(xyz, title_batch=title, outname=[f'{output_path}/recover_rotation.mp4'], fps=fps)
+    pose_vis = plot_3d.draw_to_batch(xyz, title_batch=title, outname=[f'{output_path}/rot_{name}.mp4'], fps=fps)
     return output_path
 
 
-def visualize_pos_xyz(xyz, title_batch=None, output_path='./', fps=60):
+def visualize_pos_xyz(xyz, title_batch=None, output_path='./', name='', fps=60):
     # xyz: torch.Size([nframe, 22, 3])
     xyz = xyz[:1]   
     bs, seq = xyz.shape[:2]
     xyz = xyz.reshape(bs, seq, -1, 3)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    plot_xyz = plot_3d.draw_to_batch(xyz, title_batch, [f'{output_path}/recover_position.mp4'], fps=fps)
+    plot_xyz = plot_3d.draw_to_batch(xyz, title_batch, [f'{output_path}/pos_{name}.mp4'], fps=fps)
     return output_path
 
 
@@ -166,17 +167,17 @@ if __name__ == '__main__':
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
     
-    for data_path in tqdm.tqdm(findAllFile(args.input_dir)):
+    for data_path in tqdm.tqdm(findAllFile(args.input_dir, endswith='.npy')):
         data_272 = np.load(data_path)
         if args.mode == 'rot':
             # recover from rotation
             from visualization.smplx2joints import process_smplx_data
             global_rotation = recover_from_local_rotation(data_272, njoint)  # get the 85-dim smpl data
-            visualize_smpl_85(global_rotation, output_path=args.output_dir)
+            visualize_smpl_85(global_rotation, output_path=args.output_dir, name=data_path.split('/')[-1].split('.')[0])
             print(f"Visualized results are saved in {args.output_dir}")
         else:
             # recover from position
             global_position = recover_from_local_position(data_272, njoint)
             global_position = np.expand_dims(global_position, axis=0)
-            visualize_pos_xyz(global_position, output_path=args.output_dir)
+            visualize_pos_xyz(global_position, output_path=args.output_dir, name=data_path.split('/')[-1].split('.')[0])
             print(f"Visualized results are saved in {args.output_dir}")
