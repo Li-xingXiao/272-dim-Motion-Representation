@@ -108,6 +108,16 @@ python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representa
   <em>Left: Recover from rotation &nbsp;&nbsp;&nbsp;&nbsp; Right: Recover from position</em>
 </p>
 
+If our project is helpful for your research, please consider citing :
+``` 
+@article{xiao2025motionstreamer,
+      title={MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space},
+      author={Xiao, Lixing and Lu, Shunlin and Pi, Huaijin and Fan, Ke and Pan, Liang and Zhou, Yueer and Feng, Ziyong and Zhou, Xiaowei and Peng, Sida and Wang, Jingbo},
+      journal={arXiv preprint arXiv:2503.15451},
+      year={2025}
+    }
+```
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Li-xingXiao/272-dim-Motion-Representation&type=Date)](https://www.star-history.com/#Li-xingXiao/272-dim-Motion-Representation&Date)
