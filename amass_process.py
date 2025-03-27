@@ -5,7 +5,7 @@ from tqdm import tqdm
 from os.path import join as pjoin
 import math
 import torch
-from rotation_conversions import *
+from utils.rotation_conversions import *
 import copy
 from human_body_prior.body_model.body_model import BodyModel
 import os
