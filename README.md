@@ -130,7 +130,7 @@ Evaluation of recovery from position (Need IK: position -> rotation):
 python cal_angle_error.py --mode pos
 ```
 ## 📍 Evaluation Results
-<img width="1385" alt="image" src="assert/results.png"/>
+<img width="1385" alt="image" src="assert/results.jpg"/>
 🔥🔥🔥 The errors of Directly recovery from joint rotations (No Need IK) is significantly <span style="color:red"><strong>lower</strong></span> than that of recovery from joint positions (Need IK: position -> rotation)!
 
 ## 🎬 Visualization Results
