@@ -10,9 +10,9 @@
 
 
 ## 📮 Change Log
-📢 **2025-03-28** --- Release the evaluation code and the Quantitative comparison results of recovering from joint rotations and joint positions respectively.
+📢 **2025-03-28** --- Release the evaluation code and the Quantitative comparison results of recovery from joint rotations and joint positions respectively.
 
-📢 **2025-03-13** --- Release the processing scripts to obtain the modified 272-dim motion representation and the Qualitative results of recovering from joint rotations and joint positions respectively.
+📢 **2025-03-13** --- Release the processing scripts to obtain the modified 272-dim motion representation and the Qualitative results of recovery from joint rotations and joint positions respectively.
 
 
 ## 🚀 Getting Started
@@ -107,14 +107,14 @@ python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representa
 ```
 
 ## 📖 Evaluation (Optional)
-Our goal is to obtain SMPL rotations for further usage (e.g. convert to BVH), so we evaluate the following 2 ways (Directly vs. IK) of recovering SMPL rotations.<br>
+Our goal is to obtain SMPL rotations for further usage (e.g. convert to BVH), so we evaluate the following 2 ways (Directly vs. IK) to recover SMPL rotations.<br>
 > We provide Quantitative comparison between the SMPL rotations recovered from: 
-> <br>(1) joint rotations ([8+6*22:8+12*22] in our 272 representaion. Directly recover, No need IK).
-> <br>(2) joint positions ([8:8+3*22] in our 272 representaion, Need IK: position -> rotation). 
-> <br>We refer to [https://github.com/EricGuo5513/momask-codes/blob/main/visualization/joints2bvh.py](MoMask) for the IK implementation.
+> <br>(1) joint rotations ([8+6\*22 : 8+12\*22] in our 272 representaion. Directly recover, No need IK).
+> <br>(2) joint positions ([8 : 8+3\*22] in our 272 representaion, Need IK: position -> rotation). 
+> <br>We refer to [MoMask](https://github.com/EricGuo5513/momask-codes/blob/main/visualization/joints2bvh.py) for the IK implementation.
 
 > We use angle error (geodesic distance) between the GT SMPL rotations and the recovered rotations (minimum angle between rotations) as the metric.
-> <br>GT: The data (85-dim) after running Step 1 in the [Quick Start Guide](https://github.com/Li-xingXiao/272-dim-Motion-Representation/tree/master?tab=readme-ov-file#-quick-start-guide) is used as GT ([:22*3] denotes SMPL rotations).
+> <br>GT: The data (85-dim) after running Step 1 in the [Quick Start Guide](https://github.com/Li-xingXiao/272-dim-Motion-Representation/tree/master?tab=readme-ov-file#-quick-start-guide) is used as GT ([ :22\*3] denotes SMPL rotations).
 
 >We evaluate: 
 > <br>(1) Average and Max joint errors across all files (marked as E<sub>mean</sub> and E<sub>max</sub>).
@@ -131,7 +131,7 @@ python cal_angle_error.py --mode pos
 ```
 ## 📍 Evaluation Results
 <img width="1385" alt="image" src="assert/results.png"/>
-🔥🔥🔥 The errors of Directly recovery from joint rotations (No Need IK) is significantly lower than that of recovery from joint positions (Need IK: position -> rotation)!
+🔥🔥🔥 The errors of Directly recovery from joint rotations (No Need IK) is significantly <span style="color:red"><strong>lower</strong></span> than that of recovery from joint positions (Need IK: position -> rotation)!
 
 ## 🎬 Visualization Results
 
