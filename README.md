@@ -107,6 +107,7 @@ python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representa
 ```
 
 ## 📖 Evaluation (Optional)
+To make our 272-dim motion representation more persuasive, we provide Quantitative comparison results.
 Our goal is to obtain SMPL rotations for further usage (e.g. convert to BVH), so we evaluate the following 2 ways (Directly vs. IK) to recover SMPL rotations.<br>
 > We provide Quantitative comparison between the SMPL rotations recovered from: 
 > <br>(1) joint rotations ([8+6\*22 : 8+12\*22] in our 272 representaion. Directly recover, No need IK).
@@ -119,7 +120,7 @@ Our goal is to obtain SMPL rotations for further usage (e.g. convert to BVH), so
 >We evaluate: 
 > <br>(1) Average and Max joint errors across all files (marked as E<sub>mean</sub> and E<sub>max</sub>).
 > <br>(2) Average joint errors across all files (marked as E<sub>0</sub>, E<sub>1</sub>,..., E<sub>21</sub>).
-> <br>Evaluation is down on the HumanML3D dataset (processed by our scripts).
+> <br>Evaluation is down on the [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset (processed by our scripts).
 
 Evaluation of recovery from rotation (Directly, No need IK):
 ```python
@@ -131,7 +132,7 @@ python cal_angle_error.py --mode pos
 ```
 ## 📍 Evaluation Results
 <img width="1385" alt="image" src="assert/results.jpg"/>
-🔥🔥🔥 The errors of Directly recovery from joint rotations (No Need IK) is significantly <span style="color:red"><strong>lower</strong></span> than that of recovery from joint positions (Need IK: position -> rotation)!
+🔥🔥🔥 The errors of Directly recovery from joint rotations (No Need IK) is significantly <strong>lower</strong> than those of recovery from joint positions (Need IK: position -> rotation)!
 
 ## 🎬 Visualization Results
 
