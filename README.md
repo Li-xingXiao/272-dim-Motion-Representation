@@ -10,9 +10,11 @@
 
 
 ## 📮 Change Log
-📢 **2025-03-28** --- Release the evaluation code and the Quantitative comparison results of recovery from joint rotations and joint positions respectively.
+📢  **2025-04-04** --- Release the processed 272-dim Motion Representation of [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset. Only for academic usage.
 
-📢 **2025-03-13** --- Release the processing scripts to obtain the modified 272-dim motion representation and the Qualitative results of recovery from joint rotations and joint positions respectively.
+📢  **2025-03-28** --- Release the evaluation code and the Quantitative comparison results of recovery from joint rotations and joint positions respectively.
+
+📢  **2025-03-13** --- Release the processing scripts to obtain the modified 272-dim motion representation and the Qualitative results of recovery from joint rotations and joint positions respectively.
 
 
 ## 🚀 Getting Started
@@ -144,9 +146,48 @@ python cal_angle_error.py --mode pos
   <em>Left: Recover from rotation &nbsp;&nbsp;&nbsp;&nbsp; Right: Recover from position</em>
 </p>
 
+## 🤗 Processed 272-dim Motion Representation of HumanML3D dataset</b></summary>
+To facilitate researchers, we provide the processed 272-dim Motion Representation of [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset on [Hugging Face](https://huggingface.co/datasets/lxxiao/272-dim-HumanML3D).
 
+❗️❗️❗️ The processed data is solely for academic purposes. Make sure you read through the [AMASS License](https://amass.is.tue.mpg.de/license.html).
+```bash
+pip install -U huggingface_hub
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --repo-type dataset --resume-download lxxiao/272-dim-HumanML3D --local-dir ./272_humanml3d
+cd ./272_humanml3d
+unzip texts.zip
+unzip motion_data.zip
+```
+The dataset is organized as:
+```
+./272_humanml3d
+  ├── mean_std
+      ├── Mean.npy
+      ├── Std.npy
+  ├── split
+      ├── train.txt
+      ├── val.txt
+      ├── test.txt
+  ├── texts
+      ├── 000000.txt
+      ...
+  ├── motion_data
+      ├── 000000.npy
+      ...
+```
 
+## 🌹 Acknowledgement
+This repository builds upon the following awesome datasets and projects:
+- [AMASS](https://amass.is.tue.mpg.de/index.html)
+- [HumanML3D](https://github.com/EricGuo5513/HumanML3D)
+- [UniMoCap](https://github.com/LinghaoChan/UniMoCap/tree/main)
+- [SMPL2BVH](https://github.com/KosukeFukazawa/smpl2bvh)
 
+## 📚 License
+This codebase is released under the [MIT License](LICENSE).  
+Please note that it also relies on external libraries and datasets, each of which may be subject to their own licenses and terms of use.
+
+## 🤝🏼 Citation
 If our project is helpful for your research, please consider citing :
 ``` 
 @article{xiao2025motionstreamer,
