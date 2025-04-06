@@ -150,6 +150,7 @@ python cal_angle_error.py --mode pos
 To facilitate researchers, we provide the processed 272-dim Motion Representation of [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset on [Hugging Face](https://huggingface.co/datasets/lxxiao/272-dim-HumanML3D).
 
 ❗️❗️❗️ The processed data is solely for academic purposes. Make sure you read through the [AMASS License](https://amass.is.tue.mpg.de/license.html).
+Download the processed 272-dim [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset following:
 ```bash
 pip install -U huggingface_hub
 export HF_ENDPOINT=https://hf-mirror.com
