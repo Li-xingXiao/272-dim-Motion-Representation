@@ -64,11 +64,11 @@ python amass_process.py --index_path ./test_t2m.csv --save_dir ./output/smpl_85
 <details>
 <summary><b>📝 Generate mapping files and text files</b></summary>
 
-Follow [UniMoCap](https://github.com/LinghaoChan/UniMoCap/tree/main?tab=readme-ov-file#2-generate-mapping-files-and-text-files) Step2 to get:
-- Mapping files (.csv)
-- Text files (./{dataset}_new_text)
+- Follow [UniMoCap](https://github.com/LinghaoChan/UniMoCap/tree/main?tab=readme-ov-file#2-generate-mapping-files-and-text-files) Step2 to get:
+  1. Mapping files (.csv)
+  2. Text files (./{dataset}_new_text)
 
-(Note: Remember to set fps=30 in the [h3d_to_h3d.py](https://github.com/LinghaoChan/UniMoCap/blob/main/h3d_to_h3d.py) file.)
+  (Note: Remember to set fps=30 in the [h3d_to_h3d.py](https://github.com/LinghaoChan/UniMoCap/blob/main/h3d_to_h3d.py) file.)
 </details>
 
 ## 🏃 Quick Start Guide
