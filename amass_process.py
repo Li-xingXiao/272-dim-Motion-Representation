@@ -267,7 +267,7 @@ def main():
 
     index_file = pd.read_csv(index_path)
     total_amount = index_file.shape[0]
-    ex_fps = 60   # resample to 60 FPS
+    ex_fps = 30   # resample to 30 FPS
 
     male_bm_path = './body_models/smplh/male/model.npz'
     male_dmpl_path = './body_models/dmpls/male/model.npz'
