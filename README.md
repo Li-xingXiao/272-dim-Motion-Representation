@@ -105,7 +105,7 @@ python recover_visualize.py --mode pos --input_dir ./output/Representation_272 -
 
 ### 6. Representation_272 to BVH conversion (Optional)
 ```python
-python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representation_272 --output ./output/Representation_272 --fps 60 --is_folder
+python representation_272_to_bvh.py --gender NEUTRAL --poses ./output/Representation_272 --output ./output/Representation_272 --fps 30 --is_folder
 ```
 
 ## 📖 Evaluation (Optional)
