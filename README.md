@@ -154,14 +154,14 @@ Download the processed 272-dim [HumanML3D](https://github.com/EricGuo5513/HumanM
 ```bash
 pip install -U huggingface_hub
 export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download --repo-type dataset --resume-download lxxiao/272-dim-HumanML3D --local-dir ./272_humanml3d
-cd ./272_humanml3d
+huggingface-cli download --repo-type dataset --resume-download lxxiao/272-dim-HumanML3D --local-dir ./humanml3d_272
+cd ./humanml3d_272
 unzip texts.zip
 unzip motion_data.zip
 ```
 The dataset is organized as:
 ```
-./272_humanml3d
+./humanml3d_272
   ├── mean_std
       ├── Mean.npy
       ├── Std.npy
