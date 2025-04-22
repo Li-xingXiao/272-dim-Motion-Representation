@@ -149,14 +149,9 @@ def get_smplx_85(data, ex_fps):
     
 
     for fId in range(0, frame_number, down_sample):
-        # import ipdb; ipdb.set_trace()
+        
         pose_body = data['poses'][fId:fId+1, :22*3]
-        # pose_root = data['root_orient'][fId:fId+1]
         pose_wrist = np.zeros((1, 6))
-        # pose_hand = data['pose_hand'][fId:fId+1]
-        # pose_jaw = data['pose_jaw'][fId:fId+1]
-        # pose_expression = np.zeros((, 50))
-        # pose_face_shape = np.zeros((1, 100))
         pose_trans = data['trans'][fId:fId+1]
         pose_body_shape = data['betas'][:10][None, :]
         pose = np.concatenate((pose_body, pose_wrist, pose_trans, pose_body_shape), axis=1)
