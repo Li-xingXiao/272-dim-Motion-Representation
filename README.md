@@ -149,13 +149,15 @@ python cal_angle_error.py --mode pos
 </p>
 
 ## 🤗 Processed 272-dim Motion Representation of HumanML3D dataset</b></summary>
-To facilitate researchers, we provide the processed 272-dim Motion Representation of [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset on [Hugging Face](https://huggingface.co/datasets/lxxiao/272-dim-HumanML3D).
+To facilitate researchers, we provide the processed 272-dim Motion Representation of:
+> HumanML3D dataset at [this link](https://huggingface.co/datasets/lxxiao/272-dim-HumanML3D).
+
+> BABEL dataset at [this link](https://huggingface.co/datasets/lxxiao/272-dim-BABEL).
 
 ❗️❗️❗️ The processed data is solely for academic purposes. Make sure you read through the [AMASS License](https://amass.is.tue.mpg.de/license.html).
-Download the processed 272-dim [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset following:
+
+1. Download the processed 272-dim [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset following:
 ```bash
-pip install -U huggingface_hub
-export HF_ENDPOINT=https://hf-mirror.com
 huggingface-cli download --repo-type dataset --resume-download lxxiao/272-dim-HumanML3D --local-dir ./humanml3d_272
 cd ./humanml3d_272
 unzip texts.zip
@@ -171,6 +173,30 @@ The dataset is organized as:
       ├── train.txt
       ├── val.txt
       ├── test.txt
+  ├── texts
+      ├── 000000.txt
+      ...
+  ├── motion_data
+      ├── 000000.npy
+      ...
+```
+
+2. Download the processed 272-dim [BABEL](https://babel.is.tue.mpg.de/) dataset following:
+```bash
+huggingface-cli download --repo-type dataset --resume-download lxxiao/272-dim-BABEL --local-dir ./babel_272
+cd ./babel_272
+unzip texts.zip
+unzip motion_data.zip
+```
+The dataset is organized as:
+```
+./babel_272
+  ├── t2m_babel_mean_std
+      ├── Mean.npy
+      ├── Std.npy
+  ├── split
+      ├── train.txt
+      ├── val.txt
   ├── texts
       ├── 000000.txt
       ...
