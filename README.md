@@ -191,7 +191,11 @@ This codebase is released under the [MIT License](LICENSE).
 Please note that it also relies on external libraries and datasets, each of which may be subject to their own licenses and terms of use.
 
 ## 🤝🏼 Citation
+The following exciting works use the 272-dim motion representation in this repo.
+
 If our project is helpful for your research, please consider citing :
+
+ICCV 2025:
 ``` 
 @article{xiao2025motionstreamer,
       title={MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space},
@@ -199,6 +203,16 @@ If our project is helpful for your research, please consider citing :
       journal={arXiv preprint arXiv:2503.15451},
       year={2025}
     }
+```
+
+ICCV 2025 HighLight:
+```
+@article{fan2025go,
+  title={Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data},
+  author={Fan, Ke and Lu, Shunlin and Dai, Minyue and Yu, Runyi and Xiao, Lixing and Dou, Zhiyang and Dong, Junting and Ma, Lizhuang and Wang, Jingbo},
+  journal={arXiv preprint arXiv:2507.07095},
+  year={2025}
+}
 ```
 
 ## Star History
