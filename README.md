@@ -153,13 +153,13 @@ python cal_angle_error.py --mode pos
   <em>Left: Recover from rotation &nbsp;&nbsp;&nbsp;&nbsp; Right: Recover from position</em>
 </p>
 
-## 🤗 Processed 272-dim Motion Representation of HumanML3D dataset</b></summary>
+## 🤗 Processed 272-dim Motion Representation</b></summary>
 To facilitate researchers, we provide the processed 272-dim Motion Representation of:
 > HumanML3D dataset at [this link](https://huggingface.co/datasets/lxxiao/272-dim-HumanML3D).
 
 > BABEL dataset at [this link](https://huggingface.co/datasets/lxxiao/272-dim-BABEL).
 
-❗️❗️❗️ The processed data is solely for academic purposes. Make sure you read through the [AMASS License](https://amass.is.tue.mpg.de/license.html).
+❗️❗️❗️ The processed data is solely for academic purposes. Make sure you read through the [AMASS License](https://amass.is.tue.mpg.de/license.html) and [BABEL License](https://babel.is.tue.mpg.de/license.html).
 
 1. Download the processed 272-dim [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset following:
 ```bash
@@ -213,6 +213,7 @@ The dataset is organized as:
 ## 🌹 Acknowledgement
 This repository builds upon the following awesome datasets and projects:
 - [AMASS](https://amass.is.tue.mpg.de/index.html)
+- [BABEL](https://babel.is.tue.mpg.de/index.html)
 - [HumanML3D](https://github.com/EricGuo5513/HumanML3D)
 - [UniMoCap](https://github.com/LinghaoChan/UniMoCap/tree/main)
 - [SMPL2BVH](https://github.com/KosukeFukazawa/smpl2bvh)
