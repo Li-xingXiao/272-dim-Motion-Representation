@@ -9,6 +9,11 @@
 > We refine the motion representation to enable directly conversion from joint rotations to SMPL body parameters, removing the need of Inverse Kinematics (IK) operation.
 
 
+## 🔥 News
+
+- **[2025-07]** [Go to Zero](https://arxiv.org/abs/2507.07095) has been selected as ICCV 2025 HighLight! 🎉
+- **[2025-06]** Two exciting papers using the 272-dim motion representation in this repo: [MotionStreamer](https://arxiv.org/abs/2503.15451) and [Go to Zero](https://arxiv.org/abs/2507.07095) have been accepted to ICCV 2025! 🎉
+
 ## 📮 Change Log
 📢  **2025-04-04** --- Release the processed 272-dim Motion Representation of [HumanML3D](https://github.com/EricGuo5513/HumanML3D) dataset. Only for academic usage.
 
