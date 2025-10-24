@@ -229,21 +229,25 @@ If our project is helpful for your research, please consider citing :
 
 ICCV 2025:
 ``` 
-@article{xiao2025motionstreamer,
-      title={MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space},
-      author={Xiao, Lixing and Lu, Shunlin and Pi, Huaijin and Fan, Ke and Pan, Liang and Zhou, Yueer and Feng, Ziyong and Zhou, Xiaowei and Peng, Sida and Wang, Jingbo},
-      journal={arXiv preprint arXiv:2503.15451},
-      year={2025}
-    }
+@InProceedings{Xiao_2025_ICCV,
+    author    = {Xiao, Lixing and Lu, Shunlin and Pi, Huaijin and Fan, Ke and Pan, Liang and Zhou, Yueer and Feng, Ziyong and Zhou, Xiaowei and Peng, Sida and Wang, Jingbo},
+    title     = {MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {10086-10096}
+}
 ```
 
 ICCV 2025 HighLight:
 ```
-@article{fan2025go,
-  title={Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data},
-  author={Fan, Ke and Lu, Shunlin and Dai, Minyue and Yu, Runyi and Xiao, Lixing and Dou, Zhiyang and Dong, Junting and Ma, Lizhuang and Wang, Jingbo},
-  journal={arXiv preprint arXiv:2507.07095},
-  year={2025}
+@InProceedings{Fan_2025_ICCV,
+    author    = {Fan, Ke and Lu, Shunlin and Dai, Minyue and Yu, Runyi and Xiao, Lixing and Dou, Zhiyang and Dong, Junting and Ma, Lizhuang and Wang, Jingbo},
+    title     = {Go to Zero: Towards Zero-shot Motion Generation with Million-scale Data},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {13336-13348}
 }
 ```
 
